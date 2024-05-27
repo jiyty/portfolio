@@ -1,0 +1,304 @@
+/* Reset default margin and padding */
+body, h1, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set background image and minimum width */
+body {
+    width: fit-content;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: hidden;
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 1170px) {
+    body {
+        width: 100vw; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
+
+.imagediv {
+    background-image: url('https://images.ctfassets.net/o2k19efe9565/48N08C7EWbn3O8G08V5SIY/0093bd58c1e6a25349189fd65533a47d/20230823_recording_studio_object_fatd.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw; /* Use viewport width */
+    height: 100vh; /* Use viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Set Body */
+main {
+    Display:block;
+    width: 100%;
+    height: 100vh; /* 100% of the viewport height */
+}
+
+/* Style the header */
+header {
+    background-color: transparent; /* Transparent background */
+    padding: 30px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the header is on top of other content */
+}
+
+/* Style the navbar */
+.navbar {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Ensures the navbar is on top of other content */
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+.navbar-item {
+    text-decoration: none;
+    color: white;
+    opacity: 0.5;
+    font-size: 25px;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-item:hover,
+.navbar-item:focus {
+    opacity: 1;
+}
+
+.navbar-logo {
+    text-decoration: none;
+    color: white;
+    opacity: 0.5;
+    font-size: 25px;
+    transition: opacity 0.3s ease;
+    
+}
+
+/* Style the buttons with different background positions */
+.fixed-button {
+    position: absolute;
+    background-color: white;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 998; /* Ensures the button is below the navbar */
+}
+
+.pinkBg {
+    background-color: #fff;
+}
+
+/* Positioning for buttons */
+.button1 {
+    top: 330px;
+    left: 16%;
+}
+
+.button2 {
+    top: 300px;
+    left: 45%;
+}
+
+.button3 {
+    top: 220px;
+    left: 52%;
+}
+
+.button4 {
+    top: 600px;
+    left: 5%;
+}
+
+.button5 {
+    top: 600px;
+    left: 32%;
+}
+
+.button6 {
+    top: 360px;
+    left: 58%;
+}
+
+.button7 {
+    top: 200px;
+    left: 93%;
+}
+
+/* Positioning for ripples */
+.ripple {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    margin: -45px 0 0 -45px;
+    border-radius: 100px;
+    -webkit-animation: ripple 1.8s infinite;
+    animation: ripple 1.8s infinite;
+}
+
+.ripple.button1 {
+    top: 340px;
+    left: 37%;
+}
+
+.ripple.button2 {
+    top: 395px;
+    left: 30%;
+}
+
+.ripple.button3 {
+    top: 160px;
+    left: 25%;
+}
+
+.ripple.button4 {
+    top: 360px;
+    left: 10%;
+}
+
+.ripple.button5 {
+    top: 320px;
+    left: 17%;
+}
+
+.ripple.button6 {
+    top: 415px;
+    left: 16%;
+}
+
+.ripple.button7 {
+    top: 330px;
+    left: 28%;
+}
+
+/* Keyframe animation for ripple effect */
+@-webkit-keyframes ripple {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes ripple {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.ripple:nth-child(2) {
+    animation-delay: .3s;
+    -webkit-animation-delay: .3s;
+}
+
+.ripple:nth-child(3) {
+    animation-delay: .6s;
+    -webkit-animation-delay: .6s;
+}
+
+/* Tooltip */
+[ntt]::before,
+[ntt]::after {
+    text-transform: none;
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    display: none;
+    opacity: 0;
+}
+
+[ntt]::before {
+    content: '';
+    border: 5px solid transparent;
+    z-index: 1000;
+}
+
+[ntt]::after {
+    content: attr(ntt);
+    font-size: 23px;
+    vertical-align: super;
+    letter-spacing: 1px;
+    text-align: center;
+    min-width: 3em;
+    max-width: 21em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: .8em 1em;
+    border-radius: 3px;
+    box-shadow: 0 1em 2em -.6em rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, .9);
+    color: #fff;
+    z-index: 1000;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+[ntt]:hover::before,
+[ntt]:hover::after {
+    display: block;
+}
+
+[ntt]:not([flow])::after,
+[ntt][flow^="up"]::after {
+    bottom: calc(100% + 20px);
+}
+
+[ntt]:not([flow])::before,
+[ntt]:not([flow])::after,
+[ntt][flow^="up"]::before,
+[ntt][flow^="up"]::after {
+    left: 50%;
+    transform: translate(-50%, -.6em);
+}
+
+@keyframes ntts-vert {
+    to {
+        opacity: .9;
+        transform: translate(-50%, 0);
+    }
+}
+
+[ntt]:not([flow]):hover::before,
+[ntt]:not([flow]):hover::after,
+[ntt][flow^="down"]:hover::before,
+[ntt][flow^="down"]:hover::after {
+    animation: ntts-vert 400ms ease-out forwards;
+}
