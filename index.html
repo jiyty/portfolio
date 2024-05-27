@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset = "UTF-8">
+  <meta http-equiv="X-UA-Compatible" content = "IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+  
+  <div id= "header">
+	<div class="container">
+		<nav>
+			<img src="images/logo.png" class="logo">
+			<ul>
+				<li><a href="#header">Home</a><li>
+				<li><a href="#about">About</a><li>
+				<li><a href="portfolio.html">Portfolio</a><li>
+				
+		</nav>
+		<div class="header-text">
+			<p>Computer Science</p>
+			<h1>Hi, Im <span>Jean Theo Nanit</span><br>From UE</h1>
+		
+		</div>
+	</div>
+   </div>
+   <!----------about------->
+<div id="about">
+	<div class="container">
+		<div class="row">
+			<div class="row">
+				
+				<div class="about-col-1">
+					<img src="images/user.png">
+					</div>
+					
+				<div class="about-col-2">
+					<h1 class="sub-title">About Me</h1>
+					<p>a passionate computer science student with a strong enthusiasm for learning and exploring the vast world of technology.<br>
+					While I am currently in the early stages of my academic journey, I am dedicated to acquiring a solid foundation in computer science principles and developing practical skills that will empower me in the field.
+					</p>
+					
+					<div class="tab-titles">
+					<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+					<p class="tab-links" onclick="opentab('education')">Education</p>
+					<p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
+					
+					</div>
+					<div class="tab-contents active-tab" id="skills">
+						<ul>
+							<li><br><span>Programming Languages</span><br><br>Familiarity with languages such as Python, Java, C++, or others studied in coursework.</li>
+							<li><br><span>Problem-Solving</span><br><br>Strong analytical and problem-solving skills, developed through coursework and assignments.</li>
+							<li><br><span>Team Collaboration</span><br><br>Ability to work effectively in a team, both in-person and virtually.</li>
+						</ul>
+					</div>
+					<div class="tab-contents" id="education">
+						<ul>
+							<li><br><span>2019- Present</span><br><br><b>Bachelor of Science in Computer Science</b><br>University of the East</li>
+							
+						</ul>
+					</div>
+					<div class="tab-contents" id="hobbies">
+						<ul>
+							<li><br><span>Video Games</span><br><br>Playing valorant,ML or CODM when i've got nothing to do.</li>
+							<li><br><span>Music</span><br><br> Playing guitar while singing when in the mood.</li>
+							<li><br><span>Sleeping</span><br> <br> Sleeping 24hrs when it's weekend.</li>
+						</ul>
+					</div>
+				
+				</div>
+		</div>	
+	</div>
+</div>
+
+<!------services----->
+
+
+<script>
+
+		var tablinks = document.getElementsByClassName("tab-links");
+		var tabcontents = document.getElementsByClassName("tab-contents");
+		
+		function opentab(tabname){
+			for(tablink of tablinks){
+				tablink.classList.remove("active-link");
+			}
+			for(tabcontent of tabcontents){
+				tabcontent.classList.remove("active-tab");
+			}
+			event.currentTarget.classList.add("active-link");
+			document.getElementById(tabname).classList.add("active-tab");
+		}
+		
+		// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>       
+    
+    
+  </body>
+  </html>

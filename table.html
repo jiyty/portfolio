@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - ACTIVITY 4 TABLES</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+  html, body {
+    height: 100%; 
+    margin: 0; 
+    padding: 100px;
+  }
+  .gallery-table {
+    width: 100%;
+    height: 100vh; 
+    border-collapse: collapse;
+    table-layout: cover;
+  }
+  .gallery-table td, .gallery-table th {
+    border: 2px solid black;
+    border: double;
+    padding: 0;
+    position: relative;
+  }
+  .gallery-table th {
+    background-color: #fffff;
+  }
+  .gallery-title {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+  }
+  .image-cell {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .gallery-table td {
+    height: 30%;
+  }
+  .image-cell img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+  }
+
+  @media screen and (max-width: 768px) {
+    .gallery-title {
+      font-size: 18px;
+    }
+    .gallery-table, .gallery-table th, .gallery-table td {
+      font-size: 14px;
+    }
+  }
+  </style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery of Pictures</title>
+
+</head>
+<body>
+
+<table class="gallery-table">
+  <tr>
+    <th colspan="3" class="gallery-title">Gallery of Pictures</th>
+  </tr>
+  <tr>
+    <td rowspan="4" class="image-cell" style="background-image: url('https://i.pinimg.com/564x/75/1b/9a/751b9a98a29c605f70ef79db4d8d830d.jpg');"></td>
+    <td colspan="2" class="image-cell" style="background-image: url('https://i.pinimg.com/564x/22/91/59/2291594acd064b61c99ef1038a78f4ed.jpg');"></td>
+  </tr>
+  <tr>
+    <td rowspan="2" class="image-cell" style="background-image: url('https://i.pinimg.com/564x/8e/0a/5f/8e0a5f6d1b4e2d23d3e2b60f5be44bba.jpg');"></td>
+    <td class="image-cell" style="background-image: url('https://i.pinimg.com/564x/64/e8/aa/64e8aac3028d58dfc860967c779c8ae9.jpg');"> </td>
+  </tr>
+  <tr>
+    <td rowspan="2" class="image-cell" style="background-image: url('https://i.pinimg.com/564x/ec/6a/ff/ec6aff79b4a0aa9aa440b230fc9fa63f.jpg');"></td>
+  </tr>
+  <tr>
+    <td rowspan="2" class="image-cell" style="background-image: url('https://i.pinimg.com/564x/96/43/bd/9643bd4dc9e4afdaa400616895688279.jpg');"></td>
+  </tr>
+</table>
+
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
